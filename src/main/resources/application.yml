@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mydemo
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306/batch?useUnicode=true&characterEncoding=utf8
+      username: batch
+      password: pass
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      names: ${job.name:NONE}
+      enabled: false
